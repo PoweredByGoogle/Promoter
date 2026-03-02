@@ -1,0 +1,38 @@
+{
+  "name": "Promoter",
+  "version": "1.0.0",
+  "description": "A comprehensive site promotion platform for global reach and monetization",
+  "main": "index.html",
+  "scripts": {
+    "start": "open index.html",
+    "build": "echo 'Build complete'",
+    "deploy": "git push origin main"
+  },
+  "keywords": [
+    "promotion",
+    "site-promotion",
+    "social-media",
+    "monetization",
+    "global-reach"
+  ],
+  "author": "PoweredByGoogle",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PoweredByGoogle/Promoter.git"
+  },
+  "homepage": "https://poweredbygoogle.github.io/Promoter/",
+  "features": {
+    "siteSubmission": "Allow users to submit their website URLs",
+    "socialMediaSharing": "Share promoted sites across social platforms",
+    "analytics": "Track promotion performance",
+    "monetization": "Multiple revenue streams through ads and partnerships",
+    "globalReach": "Support for multiple languages and regions"
+  },
+  "monetization": {
+    "googleAdSense": "Integrate Google AdSense for passive income",
+    "affiliateMarketing": "Partner with brands for commission-based revenue",
+    "premiumFeatures": "Offer premium listings and analytics",
+    "sponsorships": "Accept sponsorships from web services"
+  }
+}
