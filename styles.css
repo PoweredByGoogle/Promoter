@@ -1,0 +1,42 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+}
+
+.nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.ad-space {
+  background-color: #eaeaea;
+  height: 250px;
+  margin: 20px 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #777;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+}
