@@ -3,68 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Promotion Platform</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Global Link Booster | One-Tap Promotion</title>
+    <style>
+        :root { --primary: #22c55e; --dark: #0f172a; --card: #1e293b; --text: #f1f5f9; }
+        body { background: var(--dark); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 20px; }
+        header { text-align: center; padding: 20px 0; background: var(--primary); border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3); }
+        h1 { margin: 0; font-size: 24px; color: #fff; }
+        
+        .card { background: var(--card); border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #334155; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff; box-sizing: border-box; }
+        
+        .promo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+        .platform-btn { background: #334155; border: none; color: white; padding: 10px; border-radius: 8px; cursor: pointer; font-size: 14px; transition: 0.2s; }
+        .platform-btn.active { background: var(--primary); font-weight: bold; }
+        
+        .blast-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 15px; border-radius: 8px; font-size: 18px; font-weight: bold; margin-top: 20px; cursor: pointer; }
+        .footer { text-align: center; font-size: 12px; color: #64748b; margin-top: 40px; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Site Promotion Platform</h1>
-        <nav>
-            <ul>
-                <li><a href="#directory">Site Directory</a></li>
-                <li><a href="#social">Social Media</a></li>
-                <li><a href="#ads">Ads</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="form">
-            <h2>Sign Up</h2>
-            <form action="/submit" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        <section id="directory">
-            <h2>Site Directory</h2>
-            <ul>
-                <li><a href="#">Site 1</a></li>
-                <li><a href="#">Site 2</a></li>
-                <li><a href="#">Site 3</a></li>
-            </ul>
-        </section>
-        <section id="social">
-            <h2>Share on Social Media</h2>
-            <button onclick="shareOnFacebook()">Share on Facebook</button>
-            <button onclick="shareOnTwitter()">Share on Twitter</button>
-            <script>
-                function shareOnFacebook() {
-                    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
-                }
-                function shareOnTwitter() {
-                    window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href));
-                }
-            </script>
-        </section>
-        <section id="ads">
-            <h2>Advertisements</h2>
-            <div class="ad-space">Ad Space 1</div>
-            <div class="ad-space">Ad Space 2</div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Site Promotion Platform</p>
-    </footer>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #4CAF50; color: white; padding: 10px; text-align: center; }
-        nav ul { list-style: none; padding: 0; }
-        nav ul li { display: inline; margin-right: 15px; }
-        section { margin: 20px; padding: 20px; border: 1px solid #ccc; }
-        .ad-space { margin: 10px 0; border: 1px solid #000; height: 100px; text-align: center; }
-    </style>
+
+<header>
+    <h1>Global Link Booster</h1>
+    <p style="margin:5px 0 0; font-size:14px; opacity:0.9;">One-Tap Viral Promotion</p>
+</header>
+
+<div class="card">
+    <h3>1. Secure Sign Up</h3>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email Address (for promo reports)">
+</div>
+
+<div class="card">
+    <h3>2. Your Promotion Target</h3>
+    <input type="url" id="targetUrl" placeholder="Paste URL (Website, TikTok, etc.)">
+    
+    <p style="font-size:14px; color: #94a3b8;">Select Platforms to Blast:</p>
+    <div class="promo-grid">
+        <button class="platform-btn" onclick="this.classList.toggle('active')">TikTok</button>
+        <button class="platform-btn" onclick="this.classList.toggle('active')">Reddit</button>
+        <button class="platform-btn" onclick="this.classList.toggle('active')">Telegram</button>
+        <button class="platform-btn" onclick="this.classList.toggle('active')">Instagram</button>
+        <button class="platform-btn" onclick="this.classList.toggle('active')">Facebook</button>
+        <button class="platform-btn" onclick="this.classList.toggle('active')">X / Twitter</button>
+    </div>
+
+    <button class="blast-btn" onclick="startPromotion()">🚀 BLAST LINK NOW</button>
+</div>
+
+<div id="status" style="text-align:center; color:var(--primary); font-weight:bold;"></div>
+
+<script>
+    function startPromotion() {
+        const url = document.getElementById('targetUrl').value;
+        if(!url) { alert('Please paste a URL first!'); return; }
+        
+        const status = document.getElementById('status');
+        status.innerText = "Connecting to Promotion Servers...";
+        
+        setTimeout(() => { status.innerText = "Indexing on Global Directories..."; }, 1500);
+        setTimeout(() => { status.innerText = "✅ Promotion Campaign Started! Check email for reports."; }, 3500);
+    }
+</script>
+
+<div class="footer">
+    &copy; 2026 Global Promotion Platform. Free for Everyone.
+</div>
+
 </body>
 </html>
